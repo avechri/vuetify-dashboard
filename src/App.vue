@@ -8,6 +8,7 @@
       <v-btn>Login</v-btn>
     </v-app-bar>
     <!--Login Module-->
+    <v-content>
     <v-card width="400" class="mx-auto mt-5">
       <v-card-title>
         <h1 class="display-1">Login</h1>
@@ -33,6 +34,7 @@
         <v-btn color="info">Login</v-btn>
       </v-card-actions>
     </v-card>
+    </v-content>
   </v-app>
 </template>
 
