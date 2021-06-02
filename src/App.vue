@@ -1,28 +1,28 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-card>
+      <v-card-title>
+        <h1 class="display-1">Login</h1>
+      </v-card-title>
+      <v-card-text>
+        <v-form>
+          <v-text-field label="Username"/>
+          <v-text-field type="password" label="Password"/>
+        </v-form>
+      </v-card-text>
+      <v-card-actions>
+        <v-btn>Register</v-btn>
+        <v-btn>Login</v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  data: () => ({
+    //
+  }),
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
