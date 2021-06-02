@@ -7,33 +7,8 @@
       <v-btn text rounded>Home</v-btn>
       <v-btn text rounded>Login</v-btn>
     </v-app-bar>
-    <!--Login Module-->
     <v-content>
-      <v-card width="400" class="mx-auto mt-5">
-        <v-card-title>
-          <h1 class="display-1">Login</h1>
-        </v-card-title>
-        <v-card-text>
-          <v-form>
-            <v-text-field
-                prepend-icon="mdi-account-circle"
-                label="Username"/>
-            <v-text-field
-                :type="showPassword ? 'text' : 'password'"
-                label="Password"
-                prepend-icon="mdi-lock"
-                :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
-                @click:append="showPassword = !showPassword"
-            />
-          </v-form>
-        </v-card-text>
-        <v-divider></v-divider>
-        <v-card-actions>
-          <v-btn color="success">Register</v-btn>
-          <v-spacer></v-spacer>
-          <v-btn color="info">Login</v-btn>
-        </v-card-actions>
-      </v-card>
+      <router-view></router-view>
     </v-content>
     <!--Footer Module-->
     <v-footer
@@ -68,13 +43,13 @@
 <script>
 
 export default {
-  data: () => ({
-    showPassword: false,
-    links: [
+  data() {
+    return {
+      links: [
       'Home',
       'Login'
-    ]
-  }),
+    ]}
+  },
 };
 </script>
 
