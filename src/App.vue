@@ -1,5 +1,13 @@
 <template>
   <v-app>
+    <!--Navigation Module-->
+    <v-app-bar app color="primary" dark>
+      <v-tool-bar-title>Vuetify Dashboard</v-tool-bar-title>
+      <v-spacer></v-spacer>
+      <v-btn>Home</v-btn>
+      <v-btn>Login</v-btn>
+    </v-app-bar>
+    <!--Login Module-->
     <v-card width="400" class="mx-auto mt-5">
       <v-card-title>
         <h1 class="display-1">Login</h1>
