@@ -4,8 +4,8 @@
     <v-app-bar app color="primary" dark>
       <v-tool-bar-title>Vuetify Dashboard</v-tool-bar-title>
       <v-spacer></v-spacer>
-      <v-btn text rounded>Home</v-btn>
-      <v-btn text rounded>Login</v-btn>
+      <v-btn text rounded to="/">Home</v-btn>
+      <v-btn text rounded to="/login">Login</v-btn>
     </v-app-bar>
     <v-content>
       <router-view></router-view>
@@ -46,8 +46,14 @@ export default {
   data() {
     return {
       links: [
-      'Home',
-      'Login'
+        {
+          label: 'Home',
+          url: '/'
+        },
+        {
+          label: 'Login',
+          url: '/login'
+        }
     ]}
   },
 };
