@@ -14,9 +14,9 @@
         {{ link.label }}
       </v-btn>
     </v-app-bar>
-    <v-content>
+    <v-main>
       <router-view></router-view>
-    </v-content>
+    </v-main>
     <!--Footer Module-->
     <v-footer
         color="primary lighten-1"
@@ -61,6 +61,10 @@ export default {
         {
           label: 'Login',
           url: '/login'
+        },
+        {
+          label: 'Dashboard',
+          url: '/dashboard'
         }
     ]}
   },
