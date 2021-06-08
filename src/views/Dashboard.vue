@@ -6,9 +6,10 @@
           :items="desserts"
           :items-per-page="5"
           class="elevation-1"
+          @click:row="selectRow"
       ></v-data-table>
       <v-snackbar v-model="snackbar">
-        {{ text }}
+        You have selected {{ currentItem }}
           <v-btn
               color="pink"
               text
@@ -25,6 +26,8 @@ export default {
   name: 'Dashboard',
   data () {
     return {
+      currentItem: '',
+      snackbar: false,
       headers: [
     {
       text: 'Dessert (100g serving)',
@@ -122,6 +125,12 @@ export default {
       ],
     }
 },
+  methods: {
+    selectRow(event) {
+      this.snackbar = true
+      this.currentItem = event.name
+    },
+  }
 }
 </script>
 
