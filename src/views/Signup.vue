@@ -47,6 +47,10 @@
               </v-btn>
             </v-date-picker>
           </v-menu>
+
+          <v-checkbox label="Agree to sell your soul to the devil" />
+
+          <v-btn type="submit" color="primary">Submit</v-btn>
         </v-form>
       </v-col>
     </v-row>
