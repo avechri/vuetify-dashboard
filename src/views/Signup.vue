@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row>
-      <v-col>
+      <v-col cols="6">
         <h1>Sign up</h1>
         <v-form>
           <v-text-field
@@ -12,6 +12,10 @@
             required
           />
           <v-autocomplete label="Which browser do you use?" :items="browsers" />
+          <v-file-input
+            accept="image/*"
+            label="Attach profile pic"
+          ></v-file-input>
         </v-form>
       </v-col>
     </v-row>
