@@ -3,12 +3,7 @@
     <h1>Dashboard</h1>
 
     <v-row>
-      <v-col
-        v-for="sale in sales"
-        :key="`${sale.title}`"
-        md="4"
-        cols="12"
-      >
+      <v-col v-for="sale in sales" :key="`${sale.title}`" md="4" cols="12">
         <SalesGraph :sale="sale" />
       </v-col>
     </v-row>
