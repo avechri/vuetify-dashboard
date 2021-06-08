@@ -7,7 +7,6 @@
         v-for="sale in sales"
         :key="`${sale.title}`"
         md="4"
-        sm="12"
         cols="12"
       >
         <SalesGraph :sale="sale" />
@@ -22,7 +21,6 @@
         sm="6"
         md="3"
         lg="3"
-        xl="3"
       >
         <StatisticCard :statistic="statistic" />
       </v-col>
