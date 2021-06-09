@@ -72,8 +72,8 @@ export default {
       ],
       email: '',
       emailRules: [
-        v => !!v || 'E-mail is required',
-        v => /.+@.+/.test(v) || 'E-mail must be valid'
+        value => !!value || 'E-mail is required',
+        value => /.+@.+/.test(value) || 'E-mail must be valid'
       ],
       browsers: ['Chrome', 'Safari', 'Mozilla Firefox', 'Microsoft Edge'],
       birthdayDate: new Date().toISOString().substr(0, 10),
