@@ -48,7 +48,12 @@
             </v-date-picker>
           </v-menu>
 
-          <v-checkbox label="Agree to sell your soul to the devil" />
+          <v-checkbox
+            label="Agree to sell my soul to the devil"
+            v-model="agreeToTerms"
+            :rules="agreeToTermsRules"
+            required
+          />
 
           <v-btn type="submit" color="primary">Submit</v-btn>
         </v-form>
@@ -61,6 +66,10 @@
 export default {
   data() {
     return {
+      agreeToTerms: false,
+      agreeToTermsRules: [
+        value => !!value || 'You must agree to sign up an acc'
+      ],
       email: '',
       emailRules: [
         v => !!v || 'E-mail is required',
