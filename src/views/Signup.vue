@@ -3,7 +3,7 @@
     <v-row>
       <v-col cols="6">
         <h1>Sign up</h1>
-        <v-form>
+        <v-form ref="signUpForm">
           <v-text-field
             label="Email"
             type="email"
@@ -56,6 +56,10 @@
           />
 
           <v-btn type="submit" color="primary">Submit</v-btn>
+          <v-btn color="warning" @click="resetValidation"
+            >Reset Validation</v-btn
+          >
+          <v-btn color="error" @click="resetForm">Reset</v-btn>
         </v-form>
       </v-col>
     </v-row>
@@ -78,6 +82,14 @@ export default {
       browsers: ['Chrome', 'Safari', 'Mozilla Firefox', 'Microsoft Edge'],
       birthdayDate: new Date().toISOString().substr(0, 10),
       menu: false
+    }
+  },
+  methods: {
+    resetForm() {
+      this.$refs.signUpForm.reset()
+    },
+    resetValidation() {
+      this.$refs.signUpForm.resetValidation()
     }
   }
 }
