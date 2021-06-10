@@ -1,9 +1,9 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="6">
+      <v-col cols="8">
         <h1>Sign up</h1>
-        <v-form ref="signUpForm">
+        <v-form ref="signUpForm" v-model="formValidity">
           <v-text-field
             label="Email"
             type="email"
@@ -55,7 +55,16 @@
             required
           />
 
-          <v-btn class="mr-4" type="submit" color="primary">Submit</v-btn>
+          <v-btn
+            class="mr-4"
+            type="submit"
+            color="primary"
+            :disabled="!formValidity"
+            >Submit</v-btn
+          >
+          <v-btn class="mr-4" color="success" @click="validateForm"
+            >Validate form</v-btn
+          >
           <v-btn class="mr-4" color="warning" @click="resetValidation"
             >Reset Validation</v-btn
           >
@@ -81,7 +90,8 @@ export default {
       ],
       browsers: ['Chrome', 'Safari', 'Mozilla Firefox', 'Microsoft Edge'],
       birthdayDate: new Date().toISOString().substr(0, 10),
-      menu: false
+      menu: false,
+      formValidity: false
     }
   },
   methods: {
@@ -90,6 +100,9 @@ export default {
     },
     resetValidation() {
       this.$refs.signUpForm.resetValidation()
+    },
+    validateForm() {
+      this.$refs.signUpForm.validate()
     }
   }
 }
