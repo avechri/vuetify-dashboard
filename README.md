@@ -1,24 +1,24 @@
 # vuetify-dashboard
 
-## Project setup
-```
-npm install
-```
+## О проекте
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Этот проект я делала в рамках курса Vue Mastery: Beautify with Vuetify.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## В течение курса я научилась:
 
-### Lints and fixes files
-```
-npm run lint
-```
+- создавать компоненты с vuetify 
+- применять стили 
+- разбираться в логике документации vuetify 
+- настраивать роутинг
+- настраивать связку полей в компонентах и тд 
+- использовать grid system фреймворка
+- работать с формами
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## В работе с формами я научилась: 
+
+- создавать и настраивать поля для регистрации 
+- создавать удобный дэйтпикер
+- добавлять возможность загружать изображение
+- делать чекбоксы
+- делать кнопки с разной логикой 
+- валидировать поля формы: email, password и т.д.
